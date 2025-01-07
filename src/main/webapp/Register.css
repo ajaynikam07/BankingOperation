@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #74ebd5, #acb6e5); /* Teal to Lavender gradient */
+}
+
+/* Main Box */
+.fmainbox {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 10px;
+}
+
+/* Inner Box */
+.f-innerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Field Container */
+.f-field {
+    width: 100%;
+}
+
+/* Heading */
+.f-field h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+form label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="password"] ,
+form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus ,
+form input[type="email"]:focus{
+    border-color: #74ebd5;
+    background: #eefdfd;
+    outline: none;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    padding: 12px;
+    background: #74ebd5;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #62d3be;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fmainbox {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+        font-size: 13px;
+    }
+
+    form label {
+        font-size: 13px;
+    }
+}

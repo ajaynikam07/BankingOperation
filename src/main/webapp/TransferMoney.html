@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Funds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ecdcfd, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .box {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            width: 100%;
+            border: 1px solid #ccc;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2575fc;
+            outline: none;
+            box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            input[type="text"],
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Transfer Money</h2>
+            <form action="transfer" method="post">
+                <input type="text" name="yourid" placeholder="Enter Your ID" required>
+                <input type="text" name="targetid" placeholder="Enter Target ID" required>
+                <input type="text" name="amount" placeholder="Enter Amount" required>
+                <input type="submit" value="Transfer">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
